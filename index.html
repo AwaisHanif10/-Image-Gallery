@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Responsive Image Gallery</h1>
+
+  <div class="filter-buttons">
+    <button onclick="filterImages('all')">All</button>
+    <button onclick="filterImages('nature')">Nature</button>
+    <button onclick="filterImages('city')">City</button>
+    <button onclick="filterImages('Anime')">Anime</button>
+  </div>
+
+  <div class="gallery">
+    <img src="Nature1.jpg" class="gallery-item nature" onclick="openLightbox(this)">
+    <img src="City1.jpg" class="gallery-item city" onclick="openLightbox(this)">
+    <img src="Nature2.jpg" class="gallery-item nature" onclick="openLightbox(this)">
+    <img src="City2.jpg" class="gallery-item city" onclick="openLightbox(this)">
+    <img src="Anime1.jpg" class="gallery-item Anime" onclick="openLightbox(this)">
+    <img src="Anime2.jpg" class="gallery-item Anime" onclick="openLightbox(this)">
+   
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="close">&times;</span>
+    <img id="lightbox-img" src="">
+    <div class="lightbox-nav">
+      <button onclick="changeImage(-1)">❮</button>
+      <button onclick="changeImage(1)">❯</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
